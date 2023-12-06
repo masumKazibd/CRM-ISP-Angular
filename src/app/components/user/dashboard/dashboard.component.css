@@ -6,6 +6,8 @@
   .dashboard-card {
     display: flex;
     flex-direction: column;
+    width: 300px;
+    height: auto;
   }
 
   /* dashboard.component.css */
@@ -28,9 +30,21 @@
   }
 
   .mat-nav-list .mat-list-item {
-    color: rgb(0, 0, 0);
+    color: rgb(131, 126, 126);
   }
 
   .mat-nav-list .mat-list-item {
+    background-color: rgb(13, 12, 12)
+  }
+
+  .mat-nav-list .mat-list-item.active {
     background-color: rgb(255, 255, 255);
+  }
+
+  .mat-nav-list .mat-list-item:hover {
+    background-color: rgb(91, 154, 255)5)
+  }
+
+  .mat-card-title {
+    font-size: 2.5rem;
   }
