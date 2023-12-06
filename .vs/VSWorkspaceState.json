@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\user",
+    "\\src\\app\\components\\user\\login",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\mat-module",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\shared\\mat-module\\mat-module.module.ts",
+  "PreviewInSolutionExplorer": false
+}

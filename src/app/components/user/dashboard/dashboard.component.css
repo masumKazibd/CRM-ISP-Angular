@@ -1,0 +1,36 @@
+/* dashboard.component.css */
+.container {
+    margin: 20px;
+  }
+  
+  .dashboard-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* dashboard.component.css */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-nav-list .mat-list-item {
+    color: rgb(0, 0, 0);
+  }
+
+  .mat-nav-list .mat-list-item {
+    background-color: rgb(255, 255, 255);
+  }
