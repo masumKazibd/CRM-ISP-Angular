@@ -1,8 +1,7 @@
-<!-- dashboard.component.html -->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav class="sidenav" mode="side" color="light-blue" opened>
     <div class="user-info">
-      <img class="user-image" src="user-image.jpg" alt="User Image" />
+      <img class="user-image" src="\assets\images\user\user-image.jpg" alt="User Image" />
       <div class="user-details">
         <h2 class="user-name">Masum Kazi</h2>
         <p class="user-email">contact.masumkazi@gmail.com</p>
@@ -12,15 +11,16 @@
     <mat-divider></mat-divider>
 
     <mat-nav-list>
-      <a mat-list-item routerLink="#">Complain</a>
-      <a mat-list-item routerLink="#">Support Engineer</a>
-      <a mat-list-item routerLink="#">Users</a>
-      <a mat-list-item routerLink="#">Packages</a>
-      <a mat-list-item routerLink="#">Billings</a>
+      <a mat-list-item routerLink="complain">Complain</a>
+      <a mat-list-item routerLink="engineers">Support Engineer</a>
+      <a mat-list-item routerLink="users">Users</a>
+      <a mat-list-item routerLink="packages">Packages</a>
+      <a mat-list-item routerLink="billings">Billings</a>
+      <a mat-list-item routerLink="area">Area</a>
     </mat-nav-list>
   </mat-sidenav>
   <!-- dashboard contents-->
-  <mat-toolbar color="primary">
+  <mat-toolbar class="bg-dark" style="color: aliceblue;">
     <span>Admin Dashboard</span>
   </mat-toolbar>
 
@@ -29,39 +29,49 @@
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <mat-card-header>
-            <mat-card-title class="display-1">125</mat-card-title>
+            <mat-card-title><i class="fa fa-users"></i> 125</mat-card-title>
           </mat-card-header>
-          <mat-card-content> Total User </mat-card-content>
+          <mat-card-content>Total User</mat-card-content>
+          <button mat-button color="bg-dark">
+            <mat-icon routerLink="#">remove_red_eye</mat-icon>
+          </button>
         </mat-card>
       </mat-grid-tile>
 
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <mat-card-header>
-            <mat-card-title class="display-1">79</mat-card-title>
+            <mat-card-title><i class="fa fa-exclamation-circle"></i> 79</mat-card-title>
           </mat-card-header>
-          <mat-card-content> Complains </mat-card-content>
+          <mat-card-content>
+            Complains </mat-card-content>
+          <button mat-button color="bg-dark">
+            <mat-icon routerLink="#">remove_red_eye</mat-icon>
+          </button>
         </mat-card>
       </mat-grid-tile>
 
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <mat-card-header>
-            <mat-card-title class="display-1">8</mat-card-title>
+            <mat-card-title><i class="fa fa-cogs"></i> 8</mat-card-title>
           </mat-card-header>
           <mat-card-content> Support Engineer </mat-card-content>
+          <button mat-button color="bg-dark">
+            <mat-icon routerLink="#">remove_red_eye</mat-icon>
+          </button>
         </mat-card>
       </mat-grid-tile>
 
       <mat-grid-tile>
         <mat-card class="dashboard-card">
-            <h1 class="display-1">
-                84
-            </h1>
           <mat-card-header>
-            <mat-card-title class="display-1">84</mat-card-title>
+            <mat-card-title><i class="fa fa-check-circle"></i> 84</mat-card-title>
           </mat-card-header>
-          <mat-card-content> Complain solved </mat-card-content>
+          <mat-card-content >Complain solved </mat-card-content>
+          <button mat-button color="bg-dark">
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>

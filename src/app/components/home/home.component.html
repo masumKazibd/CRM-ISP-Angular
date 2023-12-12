@@ -1,0 +1,42 @@
+<div class="container">
+    <div id="carouselIndicators" class="carousel slide mb-3" data-bs-ride="carousel" style="margin-bottom: 1rem;">
+        <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let slide of slides; let i = index"
+                [ngClass]="{ 'active': i === 0 }">
+                <img class="d-block w-100" [src]="slide" alt="Slide image" style="height: 400px;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let package of packages">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ package.name }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ package.description }}</p>
+                    <p>{{ package.price }}</p>
+                    <button mat-raised-button color="primary"><mat-icon>shopping_cart</mat-icon>Purchase</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>About Us</h2>
+            <p>{{ company.about }}</p>
+            <h2>Location</h2>
+            <p>{{ company.location }}</p>
+        </div>
+    </div>
+</div>

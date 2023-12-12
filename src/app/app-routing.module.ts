@@ -6,16 +6,22 @@ import { PackageIndexComponent } from './components/package/package-index/packag
 import { ComplainIndexComponent } from './components/complain/complain-index/complain-index.component'
 import { LoginComponent } from './components/user/login/login.component'
 import { DashboardComponent } from './components/user/dashboard/dashboard.component'
-
+import {AreaIndexComponent} from './components/area/area-index/area-index.component'
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'city-create', component: CityCreateComponent },
-  { path: 'city', component: CityIndexComponent },
-  { path: 'package', component: PackageIndexComponent },
-  { path: 'complain', component: ComplainIndexComponent },
-  { path: 'dashboard', component: DashboardComponent }
-
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent,
+  children: [
+    { path: 'city', component: CityIndexComponent },
+    { path: 'city-create', component: CityCreateComponent },
+    { path: 'packages', component: PackageIndexComponent },
+    { path: 'complain', component: ComplainIndexComponent },
+    { path: 'area', component: AreaIndexComponent}
+  ]
+}
 ];
 
 @NgModule({
@@ -23,3 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const ArrayOfComponents = [DashboardComponent]

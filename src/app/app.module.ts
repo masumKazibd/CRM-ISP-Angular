@@ -34,7 +34,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 //Models
 import { CityService } from './services/city.service';
 import { LoginComponent } from './components/user/login/login.component';
-import { DashboardComponent } from './components/user/dashboard/dashboard.component'
+import { DashboardComponent } from './components/user/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { DashboardComponent } from './components/user/dashboard/dashboard.compon
     FooterComponent,
     NavBarComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
