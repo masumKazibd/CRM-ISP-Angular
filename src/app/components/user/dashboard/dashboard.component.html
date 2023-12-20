@@ -20,60 +20,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <!-- dashboard contents-->
-  <mat-toolbar class="bg-dark" style="color: aliceblue;">
+  <mat-toolbar class="bg-dark">
     <span>Admin Dashboard</span>
   </mat-toolbar>
-
-  <div class="container">
-    <mat-grid-list cols="2" rowHeight="4:1">
-      <mat-grid-tile>
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title><i class="fa fa-users"></i> 125</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>Total User</mat-card-content>
-          <button mat-button color="bg-dark">
-            <mat-icon routerLink="#">remove_red_eye</mat-icon>
-          </button>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title><i class="fa fa-exclamation-circle"></i> 79</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            Complains </mat-card-content>
-          <button mat-button color="bg-dark">
-            <mat-icon routerLink="#">remove_red_eye</mat-icon>
-          </button>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title><i class="fa fa-cogs"></i> 8</mat-card-title>
-          </mat-card-header>
-          <mat-card-content> Support Engineer </mat-card-content>
-          <button mat-button color="bg-dark">
-            <mat-icon routerLink="#">remove_red_eye</mat-icon>
-          </button>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title><i class="fa fa-check-circle"></i> 84</mat-card-title>
-          </mat-card-header>
-          <mat-card-content >Complain solved </mat-card-content>
-          <button mat-button color="bg-dark">
-            <mat-icon>remove_red_eye</mat-icon>
-          </button>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>

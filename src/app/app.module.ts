@@ -11,21 +11,6 @@ import { CityCreateComponent } from './components/city/city-create/city-create.c
 import { CityEditComponent } from './components/city/city-edit/city-edit.component';
 import { CityIndexComponent } from './components/city/city-index/city-index.component';
 
-//Area
-import { AreaCreateComponent } from './components/area/area-create/area-create.component';
-import { AreaEditComponent } from './components/area/area-edit/area-edit.component';
-import { AreaIndexComponent } from './components/area/area-index/area-index.component';
-
-//Package
-import { PackageCreateComponent } from './components/package/package-create/package-create.component';
-import { PackageEditComponent } from './components/package/package-edit/package-edit.component';
-import { PackageIndexComponent } from './components/package/package-index/package-index.component';
-
-//Complain
-import { ComplainCreateComponent } from './components/complain/complain-create/complain-create.component';
-import { ComplainEditComponent } from './components/complain/complain-edit/complain-edit.component';
-import { ComplainIndexComponent } from './components/complain/complain-index/complain-index.component';
-
 //others
 import { MatModuleModule } from './shared/mat-module/mat-module.module';
 import { FooterComponent } from './components/footer/footer.component';
@@ -35,27 +20,31 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CityService } from './services/city.service';
 import { LoginComponent } from './components/user/login/login.component';
 import { DashboardComponent } from './components/user/dashboard/dashboard.component';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { AboutPageComponent } from './components/pages/about-page/about-page.component';
+import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
+import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
+import { UserPackageListComponent } from './components/user/dashboard/userPackage/user-package-list/user-package-list.component';
+import { UserPackageCreateComponent } from './components/user/dashboard/userPackage/user-package-create/user-package-create.component';
+import { DashboardIndexComponent } from './components/user/dashboard/dashboard-index/dashboard-index.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CityCreateComponent,
     CityEditComponent,
     CityIndexComponent,
-    AreaCreateComponent,
-    AreaEditComponent,
-    AreaIndexComponent,
-    PackageCreateComponent,
-    PackageEditComponent,
-    PackageIndexComponent,
-    ComplainCreateComponent,
-    ComplainEditComponent,
-    ComplainIndexComponent,
     FooterComponent,
     NavBarComponent,
     LoginComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    AboutPageComponent,
+    ContactPageComponent,
+    FaqPageComponent,
+    UserPackageListComponent,
+    UserPackageCreateComponent,
+    DashboardIndexComponent,
   ],
   imports: [
     BrowserModule,

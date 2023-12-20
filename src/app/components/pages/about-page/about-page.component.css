@@ -1,0 +1,39 @@
+.about-us{
+    width: 1200px;
+    margin: 0 auto;
+}
+.team-member img{
+    width: 200px;
+    height: 200px;
+}
+.card :hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background: #767676;
+}
+.team-member  :hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+.follow-us{
+	margin:20px 0 0;
+}
+.follow-us li{ 
+    display:inline-block; 
+	width:auto; 
+	margin:0 5px;
+}
+.follow-us li .fa{ 
+   font-size:24px; 
+   color:#767676;
+}
+.follow-us li .fa:hover{ 
+   color:#025a8e;
+}

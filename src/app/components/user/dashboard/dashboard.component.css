@@ -1,15 +1,3 @@
-/* dashboard.component.css */
-.container {
-    margin: 20px;
-  }
-  
-  .dashboard-card {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: auto;
-  }
-
   /* dashboard.component.css */
 .user-info {
     display: flex;
