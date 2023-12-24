@@ -16,25 +16,30 @@ import { UserPackageCreateComponent } from './components/user/dashboard/userPack
 import { UserPackageListComponent } from './components/user/dashboard/userPackage/user-package-list/user-package-list.component';
 import { ComplainIndexComponent } from './components/user/dashboard/complain/complain-index/complain-index.component';
 import { ComplainCreateComponent } from './components/user/dashboard/complain/complain-create/complain-create.component';
-
+import {SupportEngineerListComponent} from './components/user/dashboard/supportEngineer/support-engineer-list/support-engineer-list.component';
+import {SupportEngineerCreateComponent} from './components/user/dashboard/supportEngineer/support-engineer-create/support-engineer-create.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   {path: 'about', component: AboutPageComponent},
   {path: 'faq', component: FaqPageComponent},
   {path: 'contact', component: ContactPageComponent},
+  //
   { path: 'dashboard', component: DashboardComponent,
   children: [
     { path: '', component: DashboardIndexComponent},
     { path: 'package-create', component: UserPackageCreateComponent },
     { path: 'packages', component: UserPackageListComponent },
-    { path: 'city', component: CityIndexComponent },
+    // { path: 'city', component: CityIndexComponent },
     { path: 'city', component: CityIndexComponent },
     { path: 'city-create', component: CityCreateComponent },
     { path: 'complain', component: ComplainIndexComponent },
     { path: 'complain-create', component: ComplainCreateComponent },
+    { path: 'support-engineer', component: SupportEngineerListComponent },
+    { path: 'support-engineer-create', component: SupportEngineerCreateComponent },
   ]
 }
 ];

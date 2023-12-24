@@ -27,6 +27,8 @@ import { FaqPageComponent } from './components/pages/faq-page/faq-page.component
 import { UserPackageListComponent } from './components/user/dashboard/userPackage/user-package-list/user-package-list.component';
 import { UserPackageCreateComponent } from './components/user/dashboard/userPackage/user-package-create/user-package-create.component';
 import { DashboardIndexComponent } from './components/user/dashboard/dashboard-index/dashboard-index.component';
+import { SupportEngineerListComponent } from './components/user/dashboard/supportEngineer/support-engineer-list/support-engineer-list.component';
+import { SupportEngineerCreateComponent } from './components/user/dashboard/supportEngineer/support-engineer-create/support-engineer-create.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { DashboardIndexComponent } from './components/user/dashboard/dashboard-i
     UserPackageListComponent,
     UserPackageCreateComponent,
     DashboardIndexComponent,
+    SupportEngineerListComponent,
+    SupportEngineerCreateComponent,
   ],
   imports: [
     BrowserModule,
