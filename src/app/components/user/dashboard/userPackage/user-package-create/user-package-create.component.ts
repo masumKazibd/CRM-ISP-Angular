@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-user-create',
-  templateUrl: './user-create.component.html',
-  styleUrls: ['./user-create.component.css']
+  selector: 'app-user-package-create',
+  templateUrl: './user-package-create.component.html',
+  styleUrls: ['./user-package-create.component.css']
 })
 export class UserPackageCreateComponent {
   savePackageForm: FormGroup;

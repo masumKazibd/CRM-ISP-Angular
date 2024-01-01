@@ -7,9 +7,9 @@ import { IspPackage } from 'src/app/models/page/ispPackage';
 
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  selector: 'app-user-package-list',
+  templateUrl: './user-package-list.component.html',
+  styleUrls: ['./user-package-list.component.css']
 })
 export class UserPackageListComponent {
   packages: IspPackage[] = [];

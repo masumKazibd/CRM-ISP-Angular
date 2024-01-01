@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form [formGroup]="savePackageForm" (ngSubmit)="onSubmit()">
+    <form class="p-3" [formGroup]="savePackageForm" (ngSubmit)="onSubmit()">
         <div>
             <mat-form-field>
                 <mat-label>Package Name</mat-label>
@@ -30,6 +30,7 @@
                 <mat-label>Package Duration</mat-label>
                 <input matInput formControlName="packageDuration">
             </mat-form-field>
+            
             <button mat-button color="primary" type="submit">Save</button>
         </div>
     </form>
