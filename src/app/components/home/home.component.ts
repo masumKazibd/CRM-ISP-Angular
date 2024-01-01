@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IspPackage } from 'src/app/models/page/ispPackage';
+import { IspPackageService } from 'src/app/services/page/ispPackage.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  packages = [
-    { name: '5 MBps', description: 'Description 1', price: '$10' },
-    { name: '10 MBps', description: 'Description 2', price: '$20' },
-    { name: '15 MBps', description: 'Description 2', price: '$20' },
-  ];
+  packages: IspPackage[] = [];
+
+  constructor(
+    private packSvc : IspPackageService
+  ){}
+
+  ngOnInit(): void {
+
+    this.packSvc.getIspPackages().subscribe(x => {
+      this.packages = x;
+    });
+  }
 
   company = {
     location: '123 Main St, Anytown, USA',

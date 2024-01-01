@@ -1,0 +1,36 @@
+<h2 class="text-center p-3">Create New Package</h2>
+<div class="row">
+    <div class="col-8">
+        <div class="float-start">
+            <button mat-button color="basic" [routerLink]="['/dashboard', 'packages']">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <form [formGroup]="savePackageForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field>
+                <mat-label>Package Name</mat-label>
+                <input formControlName="packageName" matInput>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Package Type</mat-label>
+                <mat-select formControlName="packageType">
+                    <mat-option value=null>Select One</mat-option>
+                    <mat-option value="one">First option</mat-option>
+                    <mat-option value="two">Second option</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Package Price</mat-label>
+                <input matInput formControlName="packagePrice">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Package Duration</mat-label>
+                <input matInput formControlName="packageDuration">
+            </mat-form-field>
+            <button mat-button color="primary" type="submit">Save</button>
+        </div>
+    </form>
+</div>

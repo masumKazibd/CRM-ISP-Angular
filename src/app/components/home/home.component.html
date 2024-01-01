@@ -17,14 +17,15 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4" *ngFor="let package of packages">
+        <div class="col-md-4" *ngFor="let packages of packages">
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>{{ package.name }}</mat-card-title>
+                    <mat-card-title>{{ packages.packageName}}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <p>{{ package.description }}</p>
-                    <p>{{ package.price }}</p>
+                    <p>{{ packages.packageDuration }}</p>
+                    <p>{{ packages.packageType }}</p>
+                    <p>{{ packages.packagePrice }}</p>
                     <button mat-raised-button color="primary"><mat-icon>shopping_cart</mat-icon>Purchase</button>
                 </mat-card-content>
             </mat-card>

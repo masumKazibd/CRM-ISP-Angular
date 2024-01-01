@@ -10,9 +10,7 @@ import { ContactPageComponent  } from './components/pages/contact-page/contact-p
 //for dashboard
 import { DashboardComponent } from './components/user/dashboard/dashboard.component'
 import { DashboardIndexComponent } from './components/user/dashboard/dashboard-index/dashboard-index.component';
-import { CityCreateComponent } from './components/city/city-create/city-create.component';
-import { CityIndexComponent } from './components/city/city-index/city-index.component';
-import { UserPackageCreateComponent } from './components/user/dashboard/userPackage/user-package-create/user-package-create.component';
+import { UserPackageCreateComponent } from './components/user/dashboard/userPackage/user-package-create/user-create.component';
 import { UserPackageListComponent } from './components/user/dashboard/userPackage/user-package-list/user-package-list.component';
 import { ComplainIndexComponent } from './components/user/dashboard/complain/complain-index/complain-index.component';
 import { ComplainCreateComponent } from './components/user/dashboard/complain/complain-create/complain-create.component';
@@ -33,9 +31,6 @@ const routes: Routes = [
     { path: '', component: DashboardIndexComponent},
     { path: 'package-create', component: UserPackageCreateComponent },
     { path: 'packages', component: UserPackageListComponent },
-    // { path: 'city', component: CityIndexComponent },
-    { path: 'city', component: CityIndexComponent },
-    { path: 'city-create', component: CityCreateComponent },
     { path: 'complain', component: ComplainIndexComponent },
     { path: 'complain-create', component: ComplainCreateComponent },
     { path: 'support-engineer', component: SupportEngineerListComponent },

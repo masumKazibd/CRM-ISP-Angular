@@ -18,6 +18,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
 
 const modules = [
   MatToolbarModule,
@@ -37,6 +38,7 @@ const modules = [
   MatSidenavModule,
   MatDividerModule,
   MatListModule,
+  MatSelectModule,
   ReactiveFormsModule
 ]
 

@@ -1,4 +1,4 @@
-import { Packagelist } from './packagelist';
+import { Packagelist } from './ispPackage';
 
 describe('Packagelist', () => {
   it('should create an instance', () => {
