@@ -9,13 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //others
 import { MatModuleModule } from './shared/mat-module/mat-module.module';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './shared/templating/footer/footer.component';
+import { NavBarComponent } from './shared/templating/nav-bar/nav-bar.component';
 
 //Models
 import { LoginComponent } from './components/user/login/login.component';
 import { DashboardComponent } from './components/user/dashboard/dashboard.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './shared/templating/home/home.component';
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
@@ -29,6 +29,8 @@ import { IspPackageService } from './services/page/ispPackage.service';
 import { CityCreateComponent } from './components/user/dashboard/city/city-create/city-create.component';
 import { CityListComponent } from './components/user/dashboard/city/city-list/city-list.component';
 import { CityService } from './services/page/city.service';
+import { AreaListComponent } from './components/user/dashboard/area/area-list/area-list.component';
+import { AreaCreateComponent } from './components/user/dashboard/area/area-create/area-create.component';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { CityService } from './services/page/city.service';
     SupportEngineerListComponent,
     SupportEngineerCreateComponent,
     CityCreateComponent,
-    CityListComponent
+    CityListComponent,
+    AreaListComponent,
+    AreaCreateComponent
   ],
   imports: [
     BrowserModule,

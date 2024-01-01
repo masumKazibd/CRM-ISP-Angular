@@ -10,7 +10,7 @@ import { CityService } from 'src/app/services/page/city.service';
 })
 export class CityListComponent {
   cities: CityModel[] = [];
-  displayedColumns: string[] = ['cityId','cityName', ]
+  displayedColumns: string[] = ['cityId','cityName']
   dataSource = new MatTableDataSource<CityModel>;
   dashboard: string | any[] | null | undefined;
   constructor(

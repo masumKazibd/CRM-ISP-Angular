@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AreaIndexComponent } from './area-index.component';
+import { AreaListComponent } from './area-list.component';
 
-describe('AreaIndexComponent', () => {
-  let component: AreaIndexComponent;
-  let fixture: ComponentFixture<AreaIndexComponent>;
+describe('AreaListComponent', () => {
+  let component: AreaListComponent;
+  let fixture: ComponentFixture<AreaListComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AreaIndexComponent]
+      declarations: [AreaListComponent]
     });
-    fixture = TestBed.createComponent(AreaIndexComponent);
+    fixture = TestBed.createComponent(AreaListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
