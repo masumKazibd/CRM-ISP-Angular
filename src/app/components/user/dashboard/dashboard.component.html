@@ -11,15 +11,23 @@
     <mat-divider></mat-divider>
 
     <mat-nav-list>
-      <a mat-list-item routerLink="complain">Complain</a>
-      <a mat-list-item routerLink="city">City</a>
-      <a mat-list-item routerLink="area">Area</a>
-      <a mat-list-item routerLink="role">Role</a>
+      <!-- Testing -->
+      <a mat-list-item [matMenuTriggerFor]="subMenu">Work Exactly</a>
+      <mat-menu #subMenu="matMenu">
+        <a mat-menu-item routerLink="city">City</a>
+        <a mat-menu-item routerLink="area">Area</a>
+        <a mat-menu-item routerLink="role">Role</a>
+        <a mat-menu-item routerLink="packages">Packages</a>
+
+      </mat-menu>
+      <!-- Test end -->
       <a mat-list-item routerLink="support-engineer">Support Engineer</a>
       <a mat-list-item routerLink="users">Users</a>
-      <a mat-list-item routerLink="packages">Packages</a>
+      <a mat-list-item routerLink="complain">Complain</a>
+
+
       <a mat-list-item routerLink="billings">Billings</a>
-      <a mat-list-item routerLink="support-engineer">Area</a>
+      <a mat-list-item routerLink="">Area</a>
     </mat-nav-list>
   </mat-sidenav>
   <!-- dashboard contents-->

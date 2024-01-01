@@ -1,1 +1,20 @@
-<p>area-create works!</p>
+<h2 class="text-center p-3">Create New Package</h2>
+<div class="row">
+    <div class="col-8">
+        <div class="float-start">
+            <button mat-button color="basic" [routerLink]="['/dashboard', 'city']">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <form class="p-5" [formGroup]="saveAreaForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field>
+                <mat-label>Area Name</mat-label>
+                <input formControlName="areaName" matInput>
+            </mat-form-field>
+            <button mat-button color="primary" type="submit">Save</button>
+        </div>
+    </form>
+</div>

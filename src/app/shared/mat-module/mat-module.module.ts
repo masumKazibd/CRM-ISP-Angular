@@ -19,6 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 
 const modules = [
   MatToolbarModule,
@@ -39,6 +40,7 @@ const modules = [
   MatDividerModule,
   MatListModule,
   MatSelectModule,
+  MatMenuModule,
   ReactiveFormsModule
 ]
 
