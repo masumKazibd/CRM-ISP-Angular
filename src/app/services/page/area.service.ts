@@ -3,19 +3,19 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Area } from 'src/app/models/page/area';
-
-const apiUrl = "http://localhost:19419/api/";
+import { EndPoints } from 'src/app/shared/end-ponts';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AreaService {
+  private endPoints: EndPoints = new EndPoints();
 
   constructor(private http: HttpClient) { }
   getArea(): Observable<Area[]>{
-    return this.http.get<Area[]>(apiUrl + "Areas");
+    return this.http.get<Area[]>(this.endPoints.fetchAreaEndPoint);
   }
   saveArea(data: FormGroup): Observable<Area>{
-    return this.http.post<Area>(apiUrl + "Areas", data.value)
+    return this.http.post<Area>(this.endPoints.postAreaEndPoint, data.value)
   }
 }

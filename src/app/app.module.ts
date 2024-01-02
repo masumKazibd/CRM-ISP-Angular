@@ -40,6 +40,7 @@ import { UserListComponent } from './components/user/dashboard/user/user-list/us
 import { IspPackageListComponent } from './components/user/dashboard/ispPackage/isp-package-list/isp-package-list.component';
 import { IspPackageCreateComponent } from './components/user/dashboard/ispPackage/isp-package-create/isp-package-create.component';
 import { InvoiceComponent } from './components/payment/invoice/invoice.component';
+import { EndPoints } from './shared/end-ponts';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { InvoiceComponent } from './components/payment/invoice/invoice.component
     MatModuleModule
   ],
   providers: [
+    EndPoints,
     IspPackageService,
     CityService,
     AreaService
