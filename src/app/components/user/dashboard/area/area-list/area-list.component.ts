@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { AreaModel } from 'src/app/models/page/area-model';
+import { Area } from 'src/app/models/page/area';
 import { AreaService } from 'src/app/services/page/area.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { AreaService } from 'src/app/services/page/area.service';
   styleUrls: ['./area-list.component.css']
 })
 export class AreaListComponent {
-  areas: AreaModel[] = [];
+  areas: Area[] = [];
   displayedColumns: string[] = ['areaId','areaName']
-  dataSource = new MatTableDataSource<AreaModel>;
+  dataSource = new MatTableDataSource<Area>;
   dashboard: string | any[] | null | undefined;
   constructor(
     private areaSvc: AreaService

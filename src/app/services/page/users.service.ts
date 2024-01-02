@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IspPackage } from 'src/app/models/page/ispPackage';
 import { FormGroup } from '@angular/forms';
+import { User } from 'src/app/models/page/user';
 
 
 const apiUrl = "http://localhost:19419/api/";
@@ -12,13 +13,13 @@ const apiUrl = "http://localhost:19419/api/";
 export class UserService {
 
   constructor(private http: HttpClient) { }
-  getIspPackages() : Observable<IspPackage[]>{
-    return this.http.get<IspPackage[]>(apiUrl + "Packages");
+  getUsers() : Observable<User[]>{
+    return this.http.get<User[]>(apiUrl + "Auth/getUsers");
   }
 
 
-  saveIspPackages(data: FormGroup) : Observable<IspPackage>{
-    return this.http.post<IspPackage>(apiUrl + "Packages", data.value);
+  saveUser(data: User) : Observable<User>{
+    return this.http.post<User>(apiUrl + "Auth/addUser", data);
   }
 
 }

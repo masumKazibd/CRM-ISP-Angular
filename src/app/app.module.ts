@@ -19,19 +19,27 @@ import { HomeComponent } from './shared/templating/home/home.component';
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
-import { UserPackageListComponent } from './components/user/dashboard/userPackage/user-package-list/user-package-list.component';
-import { UserPackageCreateComponent } from './components/user/dashboard/userPackage/user-package-create/user-package-create.component';
 import { DashboardIndexComponent } from './components/user/dashboard/dashboard-index/dashboard-index.component';
 import { SupportEngineerListComponent } from './components/user/dashboard/supportEngineer/support-engineer-list/support-engineer-list.component';
 import { SupportEngineerCreateComponent } from './components/user/dashboard/supportEngineer/support-engineer-create/support-engineer-create.component';
+
+//Services
 import { IspPackageService } from './services/page/ispPackage.service';
+import { CityService } from './services/page/city.service';
+import { AreaService } from './services/page/area.service';
+
 
 import { CityCreateComponent } from './components/user/dashboard/city/city-create/city-create.component';
 import { CityListComponent } from './components/user/dashboard/city/city-list/city-list.component';
-import { CityService } from './services/page/city.service';
 import { AreaListComponent } from './components/user/dashboard/area/area-list/area-list.component';
 import { AreaCreateComponent } from './components/user/dashboard/area/area-create/area-create.component';
-
+import { RoleCreateComponent } from './components/user/dashboard/role/role-create/role-create.component';
+import { RoleListComponent } from './components/user/dashboard/role/role-list/role-list.component';
+import { UserCreateComponent } from './components/user/dashboard/user/user-create/user-create.component';
+import { UserListComponent } from './components/user/dashboard/user/user-list/user-list.component';
+import { IspPackageListComponent } from './components/user/dashboard/ispPackage/isp-package-list/isp-package-list.component';
+import { IspPackageCreateComponent } from './components/user/dashboard/ispPackage/isp-package-create/isp-package-create.component';
+import { InvoiceComponent } from './components/payment/invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -44,15 +52,20 @@ import { AreaCreateComponent } from './components/user/dashboard/area/area-creat
     AboutPageComponent,
     ContactPageComponent,
     FaqPageComponent,
-    UserPackageListComponent,
-    UserPackageCreateComponent,
+    IspPackageListComponent,
+    IspPackageCreateComponent,
     DashboardIndexComponent,
     SupportEngineerListComponent,
     SupportEngineerCreateComponent,
     CityCreateComponent,
     CityListComponent,
     AreaListComponent,
-    AreaCreateComponent
+    AreaCreateComponent,
+    RoleCreateComponent,
+    RoleListComponent,
+    UserCreateComponent,
+    UserListComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +76,8 @@ import { AreaCreateComponent } from './components/user/dashboard/area/area-creat
   ],
   providers: [
     IspPackageService,
-    CityService
+    CityService,
+    AreaService
   ],
   bootstrap: [AppComponent]
 })

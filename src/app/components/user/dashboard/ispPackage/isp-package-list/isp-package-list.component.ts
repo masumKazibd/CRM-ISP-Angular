@@ -7,11 +7,11 @@ import { IspPackage } from 'src/app/models/page/ispPackage';
 
 
 @Component({
-  selector: 'app-user-package-list',
-  templateUrl: './user-package-list.component.html',
-  styleUrls: ['./user-package-list.component.css']
+  selector: 'isp-package-list',
+  templateUrl: './isp-package-list.component.html',
+  styleUrls: ['./isp-package-list.component.css']
 })
-export class UserPackageListComponent {
+export class IspPackageListComponent {
   packages: IspPackage[] = [];
   displayedColumns: string[] = ['packageId', 'packageName', 'packagePrice'];
   dataSource = new MatTableDataSource<IspPackage>;

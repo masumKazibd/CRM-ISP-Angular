@@ -1,4 +1,4 @@
-<h2 class="text-center p-3">Package List</h2>
+<h2 class="text-center p-3">User List</h2>
 <div class="row">
   <div class="col-8">
       <mat-form-field>
@@ -8,12 +8,7 @@
   </div>
   <div class="col-4">
       <div class="float-end">
-          <button mat-button color="basic" >
-              <mat-icon>search</mat-icon>
-          </button>
-      </div>
-      <div class="float-end">
-          <button mat-button color="basic" [routerLink]="['/dashboard', 'package-create']">
+          <button mat-button color="basic" [routerLink]="['/dashboard', 'user-create']">
               <mat-icon>add</mat-icon>
           </button>
       </div>
@@ -30,22 +25,33 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 
-  <ng-container matColumnDef="packageId">
-    <th mat-header-cell *matHeaderCellDef> SL </th>
-    <td mat-cell *matCellDef="let element"> {{element.packageId}} </td>
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
   </ng-container>
 
   
-  <ng-container matColumnDef="packageName">
-    <th mat-header-cell *matHeaderCellDef> Package Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.packageName}} </td>
+  <ng-container matColumnDef="userName">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
   </ng-container>
 
 
-  <ng-container matColumnDef="packagePrice">
-    <th mat-header-cell *matHeaderCellDef> Price </th>
-    <td mat-cell *matCellDef="let element"> {{element.packagePrice}} </td>
+  <ng-container matColumnDef="userEmail">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.userEmail}} </td>
   </ng-container>
+
+  <ng-container matColumnDef="userPhone">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.userPhone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="area">
+    <th mat-header-cell *matHeaderCellDef> Area </th>
+    <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+  </ng-container>
+
 
   <!-- Symbol Column -->
   <!-- <ng-container matColumnDef="action">

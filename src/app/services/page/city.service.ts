@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { CityModel } from 'src/app/models/page/city-model';
+import { City } from 'src/app/models/page/city';
 
 const apiUrl = "http://localhost:19419/api/";
 @Injectable({
@@ -10,11 +10,11 @@ const apiUrl = "http://localhost:19419/api/";
 })
 export class CityService {
   constructor(private http: HttpClient) { }
-  getCity() : Observable<CityModel[]>{
-    return this.http.get<CityModel[]>(apiUrl + "Cities");
+  getCity() : Observable<City[]>{
+    return this.http.get<City[]>(apiUrl + "Cities");
   }
   saveCity(data: FormGroup) :
-  Observable<CityModel>{
-    return this.http.post<CityModel>(apiUrl + "Cities", data.value);
+  Observable<City>{
+    return this.http.post<City>(apiUrl + "Cities", data.value);
   }
 }

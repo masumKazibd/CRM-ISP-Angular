@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { AreaModel } from 'src/app/models/page/area-model';
+import { Area } from 'src/app/models/page/area';
 
 const apiUrl = "http://localhost:19419/api/";
 
@@ -12,10 +12,10 @@ const apiUrl = "http://localhost:19419/api/";
 export class AreaService {
 
   constructor(private http: HttpClient) { }
-  getArea(): Observable<AreaModel[]>{
-    return this.http.get<AreaModel[]>(apiUrl + "Areas");
+  getArea(): Observable<Area[]>{
+    return this.http.get<Area[]>(apiUrl + "Areas");
   }
-  saveArea(data: FormGroup): Observable<AreaModel>{
-    return this.http.post<AreaModel>(apiUrl + "Areas", data.value)
+  saveArea(data: FormGroup): Observable<Area>{
+    return this.http.post<Area>(apiUrl + "Areas", data.value)
   }
 }

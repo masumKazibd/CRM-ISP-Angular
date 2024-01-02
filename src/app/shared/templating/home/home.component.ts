@@ -26,5 +26,9 @@ export class HomeComponent {
     about: 'We are a leading ISP company providing high speed internet services.'
   };
 
+  createInvoice(packages: IspPackage){
+    console.log(packages);
+  }
+
   slides = ['assets/images/slides/slide1.jpg', 'assets/images/slides/slide2.jpg', 'assets/images/slides/slide3.jpg', 'assets/images/slides/slide4.jpg'];
 }

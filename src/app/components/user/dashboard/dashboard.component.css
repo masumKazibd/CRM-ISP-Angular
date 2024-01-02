@@ -36,3 +36,7 @@
   .mat-card-title {
     font-size: 2.5rem;
   }
+
+.sidenav-container{
+  height: 100vh;
+}

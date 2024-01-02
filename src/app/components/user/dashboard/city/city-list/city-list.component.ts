@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { CityModel } from 'src/app/models/page/city-model';
+import { City } from 'src/app/models/page/city';
 import { CityService } from 'src/app/services/page/city.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { CityService } from 'src/app/services/page/city.service';
   styleUrls: ['./city-list.component.css']
 })
 export class CityListComponent {
-  cities: CityModel[] = [];
+  cities: City[] = [];
   displayedColumns: string[] = ['cityId','cityName']
-  dataSource = new MatTableDataSource<CityModel>;
+  dataSource = new MatTableDataSource<City>;
   dashboard: string | any[] | null | undefined;
   constructor(
     private citySvc: CityService

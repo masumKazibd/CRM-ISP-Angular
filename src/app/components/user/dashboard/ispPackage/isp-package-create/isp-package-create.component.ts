@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-user-package-create',
-  templateUrl: './user-package-create.component.html',
-  styleUrls: ['./user-package-create.component.css']
+  selector: 'app-isp-package-create',
+  templateUrl: './isp-package-create.component.html',
+  styleUrls: ['./isp-package-create.component.css']
 })
-export class UserPackageCreateComponent {
+export class IspPackageCreateComponent {
   savePackageForm: FormGroup;
   
  

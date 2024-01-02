@@ -1,0 +1,47 @@
+<h2 class="text-center p-3">Roles for users</h2>
+<div class="row">
+  <div class="col-8">
+      <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+      </mat-form-field>
+  </div>
+  <div class="col-4">
+      <div class="float-end">
+          <button mat-button color="basic" [routerLink]="['/dashboard', 'role-create']">
+              <mat-icon>add</mat-icon>
+          </button>
+      </div>
+      <div class="float-end">
+          <button mat-button color="basic" [routerLink]="'/dashboard'">
+              <mat-icon>arrow_back</mat-icon>
+          </button>
+      </div>
+  </div>    
+</div>
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  <ng-container matColumnDef="roleId">
+    <th mat-header-cell *matHeaderCellDef> SL </th>
+    <td mat-cell *matCellDef="let element"> {{element.roleId}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="roleName">
+    <th mat-header-cell *matHeaderCellDef> Role Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.roleName}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
