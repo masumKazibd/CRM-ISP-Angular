@@ -17,6 +17,10 @@ export class UserService {
     return this.http.get<User[]>(this.endPoints.getUsers);
   }
 
+  getTotalUsers() {
+    return this.http.get(this.endPoints.getTotalUser);
+  }
+
 
   saveUser(data: User) : Observable<User>{
     return this.http.post<User>(this.endPoints.addUser, data);

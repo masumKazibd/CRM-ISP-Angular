@@ -3,11 +3,11 @@
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <mat-card-header>
-            <mat-card-title><i class="fa fa-users"></i> 125</mat-card-title>
+            <mat-card-title><i class="fa fa-users"></i> {{totalUser}}</mat-card-title>
           </mat-card-header>
           <mat-card-content>Total User</mat-card-content>
-          <button mat-button color="bg-dark">
-            <mat-icon routerLink="#">remove_red_eye</mat-icon>
+          <button mat-button color="bg-dark" [routerLink]="['/dashboard', 'user-list']">
+            <mat-icon >remove_red_eye</mat-icon>
           </button>
         </mat-card>
       </mat-grid-tile>

@@ -1,4 +1,4 @@
-<h2 class="text-center p-3">Create New Package</h2>
+<h2 class="text-center p-3">Add New User</h2>
 <div class="row">
     <div class="col-8">
         <div class="float-start">
@@ -46,23 +46,15 @@
                 <mat-label>Address</mat-label>
                 <input formControlName="userAddress" matInput>
             </mat-form-field> -->
-            
-            <!-- <mat-form-field>
-                <mat-label>Join Date</mat-label>
-                <input formControlName="userCreateDate" matInput>
-            </mat-form-field> -->
 
             <mat-form-field class="example-full-width">
-                <mat-label>Choose a date</mat-label>
-                <!-- <input formControlName="userCreateDate" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker"> -->
+                <mat-label>Date</mat-label>
                 <input formControlName="userCreateDate" matInput [min]="minDate" [max]="maxDate"
                     [matDatepicker]="picker">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
-
-
             <mat-form-field>
                 <mat-label>City</mat-label>
                 <mat-select formControlName="cityId">

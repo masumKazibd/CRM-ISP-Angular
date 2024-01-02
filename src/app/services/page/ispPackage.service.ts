@@ -17,6 +17,10 @@ export class IspPackageService {
     return this.http.get<IspPackage[]>(this.endPoints.getIspPackages);
   }
 
+  getIspPackageById(id: string) : Observable<IspPackage>{
+    return this.http.get<IspPackage>(this.endPoints.getIspPackageById + id);
+  }
+  
 
   saveIspPackages(data: FormGroup) : Observable<IspPackage>{
     return this.http.post<IspPackage>(this.endPoints.saveIspPackage, data.value);

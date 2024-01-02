@@ -17,16 +17,22 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4" *ngFor="let packages of packages">
+        <div class="col-md-4 mt-2 mb-2" *ngFor="let packages of packages">
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>{{ packages.packageName}}</mat-card-title>
+                    <mat-card-title>Package Name: {{ packages.packageName}}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <p>{{ packages.packageDuration }}</p>
-                    <p>{{ packages.packageType }}</p>
-                    <p>{{ packages.packagePrice }}</p>
-                    <button mat-raised-button color="primary" onclick="createInvoice(packages)"><mat-icon>shopping_cart</mat-icon>Purchase</button>
+                    <b>Duration :</b>   {{ packages.packageDuration }}<br>
+                    <b>Type : </b> {{ packages.packageType }}<br>
+                    <b>Price : </b>  {{ packages.packagePrice }}<br>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <div class="align-items-center">
+                            <button mat-raised-button color="primary" (click)="createInvoice(packages.packageId)"><mat-icon>shopping_cart</mat-icon>Purchase</button>
+                        </div>
+                        
+                    </div>
                 </mat-card-content>
             </mat-card>
         </div>
