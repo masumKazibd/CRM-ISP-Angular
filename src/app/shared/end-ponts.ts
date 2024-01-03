@@ -12,4 +12,5 @@ export class EndPoints{
     getUsers = this.apiUrl + "Auth/getUsers";
     addUser = this.apiUrl + "Auth/addUser";
     getTotalUser = this.apiUrl + "Auth/getTotalUsers";
+    getMaxBillingId = this.apiUrl + "Billings/getMaxBillingId";
 }

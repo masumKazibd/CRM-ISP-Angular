@@ -41,6 +41,7 @@ import { IspPackageListComponent } from './components/user/dashboard/ispPackage/
 import { IspPackageCreateComponent } from './components/user/dashboard/ispPackage/isp-package-create/isp-package-create.component';
 import { InvoiceComponent } from './components/payment/invoice/invoice.component';
 import { EndPoints } from './shared/end-ponts';
+import { BillingService } from './services/page/billing.service';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { EndPoints } from './shared/end-ponts';
     EndPoints,
     IspPackageService,
     CityService,
+    BillingService,
     AreaService
   ],
   bootstrap: [AppComponent]
