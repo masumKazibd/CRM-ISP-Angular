@@ -16,8 +16,8 @@ export class InvoiceComponent {
 
   invoiceInfo?: string;
   invoiceForm: FormGroup;
-  minDate = new Date(1900, 0, 1); // January 1, 1900
-  maxDate = new Date(2050, 11, 31); // December 31, 2050
+  minDate = new Date(1900, 0, 1);
+  maxDate = new Date(2050, 11, 31);
   packageId?:  string;
   invoiceNo?: string;
   ispPackage: IspPackage = new IspPackage();

@@ -47,36 +47,31 @@
                 <input formControlName="userAddress" matInput>
             </mat-form-field> -->
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field>
                 <mat-label>Date</mat-label>
-                <input formControlName="userCreateDate" matInput [min]="minDate" [max]="maxDate"
-                    [matDatepicker]="picker">
+                <input formControlName="userCreateDate" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
+
             <mat-form-field>
                 <mat-label>City</mat-label>
                 <mat-select formControlName="cityId">
-                    <mat-option value=null>Select One</mat-option>
-                    <mat-option value=1>First option</mat-option>
-                    <mat-option value=2>Second option</mat-option>
+                    <mat-option *ngFor="let city of cityInfo" [value]="city.cityId">{{city.cityName}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Area</mat-label>
                 <mat-select formControlName="areaId">
-                    <mat-option value=null>Select One</mat-option>
-                    <mat-option value=1>First option</mat-option>
-                    <mat-option value=2>Second option</mat-option>
+                    <mat-option *ngFor="let area of areas" [value]="area.areaId">{{area.areaName}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Package</mat-label>
                 <mat-select formControlName="packageId">
-                    <mat-option value=null>Select One</mat-option>
-                    <mat-option value=1>First option</mat-option>
-                    <mat-option value=2>Second option</mat-option>
+                    <mat-option *ngFor="let ispPackage of ispPackages"
+                        [value]="ispPackage.packageId">{{ispPackage.packageName}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <button mat-button color="primary" type="submit">Save</button>
